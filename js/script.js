@@ -27,3 +27,23 @@ document.getElementById('calculate-balance').addEventListener('click', function 
     inputRent.value = '';
     inputClothes.value = '';
 })
+//For Savings section
+document.getElementById('savings-button').addEventListener('click', function () {
+
+    // getting input value and converting into float type
+    const inputSavings = document.getElementById('inputSavings');
+    const inputSavingsText = inputSavings.value;
+    const inputSavingsValue = parseFloat(inputSavingsText);
+    // Calculating percentage
+    const percentageValue = inputSavingsValue / 100;
+    // calculating savings amount from income
+    const inputIncome = document.getElementById('inputIncome');
+    const inputIncomeText = inputIncome.value;
+    const inputIncomeValue = parseFloat(inputIncomeText);
+    const savingsAmount = inputIncomeValue * percentageValue;
+    document.getElementById('savings-amount').innerText = savingsAmount;
+
+    // Getting input fields cleared
+    inputSavings.value = '';
+    inputIncome.value = '';
+})

@@ -84,14 +84,15 @@
                     <!-- savings percentage input -->
                     <div class="d-flex justify-content-center align-items-center">
                         <small class="fs-6 me-3">Save: </small>
-                        <input type="text" class="w-25 form-control " id="inputFood"
+                        <input type="text" class="w-25 form-control " id="inputSavings"
                             style="background-color: gainsboro;">
                         <small class="fs-6 mx-2">%</small>
-                        <button class="px-5 py-2 bg-primary text-white border-0 rounded">Save</button>
+                        <button class="px-5 py-2 bg-primary text-white border-0 rounded"
+                            id="savings-button">Save</button>
                     </div>
                     <!-- Calculated Output -->
                     <div>
-                        <h5 class="mt-4 text-center">Saving Amount: <span>00</span></h5>
+                        <h5 class="mt-4 text-center">Saving Amount: <span id="savings-amount">00</span></h5>
                         <h5 class="mb-4 text-center">Remaining Balance: <span>00</span></h5>
                     </div>
                 </section>
