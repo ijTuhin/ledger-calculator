@@ -15,11 +15,12 @@ document.getElementById('calculate-balance').addEventListener('click', function 
     const inputClothes = document.getElementById('inputClothes');
     const inputClothesText = inputClothes.value;
     const inputClothesValue = parseFloat(inputClothesText);
-    // Adding all expenses
+    // Adding all expenses and Displaying total expenses
     const totalExpenses = inputFoodValue + inputRentValue + inputClothesValue;
-    console.log(totalExpenses);
-    // Displaying total expenses
     document.getElementById('total-expenses').innerText = totalExpenses;
+    // Calculating and displaying balance amount
+    const balanceAmount = inputIncomeValue - totalExpenses;
+    document.getElementById('balance-amount').innerText = balanceAmount;
     // Getting input fields cleared
     inputIncome.value = '';
     inputFood.value = '';
