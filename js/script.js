@@ -31,12 +31,21 @@ document.getElementById('calculate-balance').addEventListener('click', function 
             alert('Please reduce your expenses!'); // while expense exceeds income type error.
             document.getElementById('total-expenses').innerText = '00';
             document.getElementById('balance-amount').innerText = '00';
+            //Clearing input field to get new input
+            inputFood.value = '';
+            inputRent.value = '';
+            inputClothes.value = '';
         }
     }
     else {
-        alert('Negative numbers are not accepted! Please provide valid amount'); // For invalid negative integer input type error.
+        alert('Negative number detected! Please provide valid amount'); // For invalid negative integer input type error.
         document.getElementById('total-expenses').innerText = '00';
         document.getElementById('balance-amount').innerText = '00';
+        //Clearing input field to get new input
+        inputIncome.value = '';
+        inputFood.value = '';
+        inputRent.value = '';
+        inputClothes.value = '';
     }
 })
 
@@ -76,7 +85,7 @@ document.getElementById('savings-button').addEventListener('click', function () 
     const remainingBalance = balanceAmount - savingsAmount;
 
     // Displaying output
-    if (inputIncomeValue >= 0 && inputFoodValue >= 0 && inputRentValue >= 0 && inputClothesValue >= 0) {
+    if (inputIncomeValue >= 0 && inputFoodValue >= 0 && inputRentValue >= 0 && inputClothesValue >= 0 && inputSavingsValue >= 0) {
         if (inputIncomeValue >= totalExpenses) {
             if (savingsAmount <= balanceAmount) {
                 document.getElementById('savings-amount').innerText = savingsAmount;
@@ -86,17 +95,29 @@ document.getElementById('savings-button').addEventListener('click', function () 
                 alert('You do not have sufficient balance!'); // For insufficient balance type error.
                 document.getElementById('savings-amount').innerText = '00';
                 document.getElementById('remaining-balance').innerText = '00';
+                //Clearing input field to get new input
+                inputSavings.value = '';
             }
         }
         else {
             alert('Please reduce your expenses!'); // while expense exceeds income type error.
             document.getElementById('total-expenses').innerText = '00';
             document.getElementById('balance-amount').innerText = '00';
+            //Clearing input field to get new input
+            inputFood.value = '';
+            inputRent.value = '';
+            inputClothes.value = '';
         }
     }
     else {
-        alert('Negative numbers are not accepted! Please provide valid amount'); // For invalid negative integer input type error.
+        alert('Negative number detected! Please provide the valid amount'); // For invalid negative integer input type error.
         document.getElementById('total-expenses').innerText = '00';
         document.getElementById('balance-amount').innerText = '00';
+        //Clearing input field to get new input
+        inputIncome.value = '';
+        inputFood.value = '';
+        inputRent.value = '';
+        inputClothes.value = '';
+        inputSavings.value = '';
     }
 })
