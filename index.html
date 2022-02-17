@@ -21,11 +21,11 @@
     <main class="container">
         <div class="row gx-4">
             <!-- Image side - left column -->
-            <div class="col-lg-6 col-12 pb-5">
-                <img src="img/img-2.jpg" class="img-fluid pb-5 mb-5" alt="">
+            <div class="col-lg-4 col-12 pb-5">
+                <img src="img/img-2.jpg" class="img-fluid" alt="">
             </div>
             <!-- Calculation side - right column -->
-            <div class="col-lg-6 col-12 pb-5 bg-light" style="height: 820px;">
+            <div class="col-lg-6 col-12 pb-5 bg-light">
                 <!-- Balance section -->
                 <section class="w-75 ms-5 pt-5">
                     <!-- Income input -->
@@ -35,7 +35,7 @@
                             <label for="inputIncome" class="d-flex justify-content-end col-sm-4 col-form-label">Income :
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" class=" form-control " id="inputIncome"
+                                <input type="number" class=" form-control " placeholder="$0.00" id="inputIncome"
                                     style="background-color: gainsboro ;">
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                             <label for="inputFood" class="d-flex justify-content-end col-sm-4 col-form-label">Food :
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" class=" form-control " id="inputFood"
+                                <input type="number" class=" form-control " placeholder="$0.00" id="inputFood"
                                     style="background-color: gainsboro ;">
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                             <label for="inputRent" class="d-flex justify-content-end col-sm-4 col-form-label">Rent :
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" class=" form-control " id="inputRent"
+                                <input type="number" class=" form-control " placeholder="$0.00" id="inputRent"
                                     style="background-color: gainsboro ;">
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                             <label for="inputClothes" class="d-flex justify-content-end col-sm-4 col-form-label">Clothes
                                 :</label>
                             <div class="col-sm-8">
-                                <input type="text" class=" form-control " id="inputClothes"
+                                <input type="number" class=" form-control " placeholder="$0.00" id="inputClothes"
                                     style="background-color: gainsboro ;">
                             </div>
                         </div>
@@ -75,8 +75,8 @@
                     </div>
                     <!-- Calculated Output -->
                     <div>
-                        <h5 class="mt-4 text-center">Total Expenses: <span id="total-expenses">00</span></h5>
-                        <h5 class="mb-4 text-center">Balance: <span id="balance-amount">00</span></h5>
+                        <h5 class="mt-4 text-center">Total Expenses: $<span id="total-expenses">0</span></h5>
+                        <h5 class="mb-4 text-center">Balance: $<span id="balance-amount">0</span></h5>
                     </div>
                 </section>
                 <!-- Savings section -->
@@ -84,7 +84,7 @@
                     <!-- savings percentage input -->
                     <div class="d-flex justify-content-center align-items-center">
                         <small class="fs-6 me-3">Save: </small>
-                        <input type="text" class="w-25 form-control " id="inputSavings"
+                        <input type="number" class="w-25 form-control " placeholder="0" id="inputSavings"
                             style="background-color: gainsboro;">
                         <small class="fs-6 mx-2">%</small>
                         <button class="px-5 py-2 bg-primary text-white border-0 rounded"
@@ -92,8 +92,8 @@
                     </div>
                     <!-- Calculated Output -->
                     <div>
-                        <h5 class="mt-4 text-center">Saving Amount: <span id="savings-amount">00</span></h5>
-                        <h5 class="mb-4 text-center">Remaining Balance: <span id="remaining-balance">00</span></h5>
+                        <h5 class="mt-4 text-center">Saving Amount: $<span id="savings-amount">0</span></h5>
+                        <h5 class="mb-4 text-center">Remaining Balance: $<span id="remaining-balance">0</span></h5>
                     </div>
                 </section>
             </div>

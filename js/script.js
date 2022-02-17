@@ -19,8 +19,34 @@ document.getElementById('calculate-balance').addEventListener('click', function 
     const totalExpenses = inputFoodValue + inputRentValue + inputClothesValue;
     const balanceAmount = inputIncomeValue - totalExpenses;
     // displaying outputs
-    document.getElementById('total-expenses').innerText = totalExpenses;
-    document.getElementById('balance-amount').innerText = balanceAmount;
+    if (inputIncomeValue >= 0 && inputFoodValue >= 0 && inputRentValue >= 0 && inputClothesValue >= 0) {
+        if (inputIncomeValue >= totalExpenses) {
+            document.getElementById('total-expenses').innerText = totalExpenses;
+            document.getElementById('balance-amount').innerText = balanceAmount;
+        }
+        else {
+            // console.log('Please reduce your expenses!'); 
+            alert('Please reduce your expenses!'); // For invalid input type error.
+            document.getElementById('total-expenses').innerText = '00';
+            document.getElementById('balance-amount').innerText = '00';
+            // Getting input fields cleared
+            /* inputIncome.value = '';
+            inputFood.value = '';
+            inputRent.value = '';
+            inputClothes.value = ''; */
+        }
+    }
+    else {
+        // console.log('Negative numbers are not accepted! Please provide valid amount');
+        alert('Negative numbers are not accepted! Please provide valid amount'); // For invalid input type error.
+        document.getElementById('total-expenses').innerText = '00';
+        document.getElementById('balance-amount').innerText = '00';
+        // Getting input fields cleared
+        /* inputIncome.value = '';
+        inputFood.value = '';
+        inputRent.value = '';
+        inputClothes.value = ''; */
+    }
     // Getting input fields cleared
     // inputIncome.value = '';
     // inputFood.value = '';
@@ -61,9 +87,43 @@ document.getElementById('savings-button').addEventListener('click', function () 
     const savingsAmount = inputIncomeValue * percentageValue;
     const remainingBalance = balanceAmount - savingsAmount;
     // Displaying output
-    document.getElementById('savings-amount').innerText = savingsAmount;
-    document.getElementById('remaining-balance').innerText = remainingBalance;
-    // Getting input fields cleared
-    // inputSavings.value = '';
-    // inputIncome.value = '';
+    if (inputIncomeValue >= 0 && inputFoodValue >= 0 && inputRentValue >= 0 && inputClothesValue >= 0) {
+        if (inputIncomeValue >= totalExpenses) {
+            if (savingsAmount <= balanceAmount) {
+                document.getElementById('savings-amount').innerText = savingsAmount;
+                document.getElementById('remaining-balance').innerText = remainingBalance;
+            }
+            else {
+                // console.log('You do not have sufficient balance!');
+                alert('You do not have sufficient balance!'); // For invalid input type error.
+                document.getElementById('savings-amount').innerText = '00';
+                document.getElementById('remaining-balance').innerText = '00';
+                // Getting input fields cleared
+                /* inputSavings.value = '';
+                inputIncome.value = ''; */
+            }
+        }
+        else {
+            // console.log('Please reduce your expenses!');
+            alert('Please reduce your expenses!'); // For invalid input type error.
+            document.getElementById('total-expenses').innerText = '00';
+            document.getElementById('balance-amount').innerText = '00';
+            // Getting input fields cleared
+            /* inputIncome.value = '';
+            inputFood.value = '';
+            inputRent.value = '';
+            inputClothes.value = ''; */
+        }
+    }
+    else {
+        // console.log('Negative numbers are not accepted! Please provide valid amount');
+        alert('Negative numbers are not accepted! Please provide valid amount'); // For invalid input type error.
+        document.getElementById('total-expenses').innerText = '00';
+        document.getElementById('balance-amount').innerText = '00';
+        // Getting input fields cleared
+        /* inputIncome.value = '';
+        inputFood.value = '';
+        inputRent.value = '';
+        inputClothes.value = ''; */
+    }
 })
