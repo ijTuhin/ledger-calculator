@@ -5,12 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- css file link -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Tailwind CDN -->
+    <!-- Tailwind cdn link -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- title -->
     <title>Save-Ex: Balance your Income</title>
 </head>
@@ -23,15 +19,21 @@
             income</h2>
     </header>
     <main class="mb-10">
+
+        <!-- creating two columns for image and calculator -->
         <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-8 mx-24">
+
             <!-- Image side - left column -->
             <div class="my-4 pt-14">
                 <img src="img/img-1.jpg" class="img-fluid" alt="">
             </div>
+
             <!-- Calculation side - right column -->
             <div class="shadow-2xl shadow-black bg-slate-700 text-white mx-3 p-6 rounded">
+
                 <!-- Balance section -->
                 <section>
+
                     <!-- Income input -->
                     <div class="mb-6">
                         <div class="font-medium text-1xl flex flex-row justify-start">
@@ -43,6 +45,7 @@
                                 class="text-slate-500 basis-1/10 mt-1 px-5 py-1 bg-slate-200 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none w-50 rounded-md sm:text-sm focus:ring-1" />
                         </div>
                     </div>
+
                     <!-- Expenses input -->
                     <div class="mb-2">
                         <div class="font-medium text-1xl flex flex-row justify-start">
@@ -66,10 +69,12 @@
                         <br>
                         <hr>
                     </div>
+
                     <!-- Balance button -->
                     <div class="flex justify-end">
                         <button class="border px-4 py-1 rounded" id="calculate-balance">Calculate</button>
                     </div>
+
                     <!-- Calculated Output -->
                     <div class="text-1xl flex flex-col justify-start">
                         <p>Total Expense: $<span class="ml-1 text-gray-400" id="total-expenses">0</span></p>
@@ -78,8 +83,10 @@
                     <br>
                     <hr>
                 </section>
+
                 <!-- Savings section -->
                 <section>
+
                     <!-- savings percentage input -->
                     <div class="flex flex-row justify-center items-center my-5">
                         <span class="pr-5">To save:</span>
@@ -88,15 +95,20 @@
                         <span class="mx-2">%</span>
                         <button class="border px-4 py-1 rounded" id="savings-button">Save</button>
                     </div>
+
                     <!-- Calculated Output -->
                     <div class=" text-1xl flex flex-col justify-center items-center">
                         <p>Savings : $<span class="ml-1 text-gray-400" id="savings-amount">0</span></p>
                         <p>Remaining Balance: $<span class="ml-1 text-gray-400" id="remaining-balance">0</span></p>
                     </div>
                 </section>
+
             </div>
+
         </div>
+
     </main>
+
     <!-- js file link -->
     <script src="js/script.js"></script>
 
