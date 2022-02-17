@@ -15,11 +15,12 @@
 
 <body class="bg-slate-300">
     <header>
-        <h2 class="text-center text-3xl m-8 text-sky-700"><span class="text-cyan-600">Save-Ex:</span> Balance of your
+        <h2 class="font-semibold text-center text-3xl m-8 text-sky-700"><span class="text-cyan-600">Save-Ex:</span>
+            Balance of your
             income</h2>
     </header>
-    <main>
-        <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-8 mx-28">
+    <main class="mb-10">
+        <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-8 mx-24">
             <!-- Image side - left column -->
             <div class="my-4 pt-14">
                 <img src="img/img-1.jpg" class="img-fluid" alt="">
@@ -68,8 +69,8 @@
                     </div>
                     <!-- Calculated Output -->
                     <div class="text-1xl flex flex-col justify-start">
-                        <p>Total Expense: $<span id="total-expenses">0</span></p>
-                        <p>Balance: $<span id="balance-amount">0</span></p>
+                        <p>Total Expense: $<span class="text-gray-400" id="total-expenses">0</span></p>
+                        <p>Balance: $<span class="text-gray-400" id="balance-amount">0</span></p>
                     </div>
                     <br>
                     <hr>
@@ -78,16 +79,16 @@
                 <section>
                     <!-- savings percentage input -->
                     <div class="flex flex-row justify-center items-center my-5">
-                        <span class="pr-5">Savings :</span>
+                        <span class="pr-5">To save:</span>
                         <input type="number" placeholder="$0.00" id="inputSavings"
                             class="text-slate-500  mt-1 px-5 py-1 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none w-40 rounded-md sm:text-sm focus:ring-1" />
                         <span class="mx-2">%</span>
                         <button class="border px-4 py-1 rounded" id="savings-button">Save</button>
                     </div>
                     <!-- Calculated Output -->
-                    <div class="px-10 mx-10 text-1xl flex flex-col justify-start">
-                        <p>Total Expense: $<span id="savings-amount">0</span></p>
-                        <p>Remaining Balance: $<span id="remaining-balance">0</span></p>
+                    <div class=" text-1xl flex flex-col justify-center items-center">
+                        <p>Savings Amount: $<span class="text-gray-400" id="savings-amount">0</span></p>
+                        <p>Remaining Balance: $<span class="text-gray-400" id="remaining-balance">0</span></p>
                     </div>
                 </section>
             </div>
