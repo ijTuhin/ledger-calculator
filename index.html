@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- title -->
     <title>Save-Ex: Balance your Income</title>
 </head>
 
 <body class="bg-slate-300">
     <header>
-        <h2 class="font-semibold text-center text-3xl m-8 text-sky-700"><span class="text-cyan-600">Save-Ex:</span>
+        <h2 class="font-medium text-center text-2xl my-8 text-sky-700"><span
+                class="font-semibold text-yellow-600 italic text-3xl">Save-Ex:</span>
             Balance of your
             income</h2>
     </header>
@@ -31,34 +34,34 @@
                 <section>
                     <!-- Income input -->
                     <div class="mb-6">
-                        <div class="text-1xl flex flex-row justify-start">
+                        <div class="font-medium text-1xl flex flex-row justify-start">
                             <p>Your Income</p>
                         </div>
                         <div class="flex flex-row justify-center items-center">
                             <span class="basis-1/4">Income :</span>
                             <input type="number" placeholder="$0.00" id="inputIncome"
-                                class="text-slate-500 basis-1/10 mt-1 px-5 py-1 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none w-50 rounded-md sm:text-sm focus:ring-1" />
+                                class="text-slate-500 basis-1/10 mt-1 px-5 py-1 bg-slate-200 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none w-50 rounded-md sm:text-sm focus:ring-1" />
                         </div>
                     </div>
                     <!-- Expenses input -->
                     <div class="mb-2">
-                        <div class="text-1xl flex flex-row justify-start">
+                        <div class="font-medium text-1xl flex flex-row justify-start">
                             <p>Your Expenses</p>
                         </div>
                         <div class="flex flex-row justify-center items-center">
                             <span class="basis-1/4">Food :</span>
                             <input type="number" placeholder="$0.00" id="inputFood"
-                                class="text-slate-500 basis-1/10 mt-1 px-5 py-1 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none w-50 rounded-md sm:text-sm focus:ring-1" />
+                                class="text-slate-500 basis-1/10 mt-1 px-5 py-1 bg-slate-200 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none w-50 rounded-md sm:text-sm focus:ring-1" />
                         </div>
                         <div class="flex flex-row justify-center items-center">
                             <span class="basis-1/4">Rent :</span>
                             <input type="number" placeholder="$0.00" id="inputRent"
-                                class="text-slate-500 basis-1/10 mt-1 px-5 py-1 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none w-50 rounded-md sm:text-sm focus:ring-1" />
+                                class="text-slate-500 basis-1/10 mt-1 px-5 py-1 bg-slate-200 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none w-50 rounded-md sm:text-sm focus:ring-1" />
                         </div>
                         <div class="flex flex-row justify-center items-center">
                             <span class="basis-1/4">Clothes :</span>
                             <input type="number" placeholder="$0.00" id="inputClothes"
-                                class="text-slate-500 basis-1/10 mt-1 px-5 py-1 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none w-50 rounded-md sm:text-sm focus:ring-1" />
+                                class="text-slate-500 basis-1/10 mt-1 px-5 py-1 bg-slate-200 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none w-50 rounded-md sm:text-sm focus:ring-1" />
                         </div>
                         <br>
                         <hr>
@@ -69,8 +72,8 @@
                     </div>
                     <!-- Calculated Output -->
                     <div class="text-1xl flex flex-col justify-start">
-                        <p>Total Expense: $<span class="text-gray-400" id="total-expenses">0</span></p>
-                        <p>Balance: $<span class="text-gray-400" id="balance-amount">0</span></p>
+                        <p>Total Expense: $<span class="ml-1 text-gray-400" id="total-expenses">0</span></p>
+                        <p>Balance: $<span class="ml-1 text-gray-400" id="balance-amount">0</span></p>
                     </div>
                     <br>
                     <hr>
@@ -81,14 +84,14 @@
                     <div class="flex flex-row justify-center items-center my-5">
                         <span class="pr-5">To save:</span>
                         <input type="number" placeholder="$0.00" id="inputSavings"
-                            class="text-slate-500  mt-1 px-5 py-1 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none w-40 rounded-md sm:text-sm focus:ring-1" />
+                            class="text-slate-500  mt-1 px-5 py-1 bg-slate-200 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none w-40 rounded-md sm:text-sm focus:ring-1" />
                         <span class="mx-2">%</span>
                         <button class="border px-4 py-1 rounded" id="savings-button">Save</button>
                     </div>
                     <!-- Calculated Output -->
                     <div class=" text-1xl flex flex-col justify-center items-center">
-                        <p>Savings Amount: $<span class="text-gray-400" id="savings-amount">0</span></p>
-                        <p>Remaining Balance: $<span class="text-gray-400" id="remaining-balance">0</span></p>
+                        <p>Savings : $<span class="ml-1 text-gray-400" id="savings-amount">0</span></p>
+                        <p>Remaining Balance: $<span class="ml-1 text-gray-400" id="remaining-balance">0</span></p>
                     </div>
                 </section>
             </div>
